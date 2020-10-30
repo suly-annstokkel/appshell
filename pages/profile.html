@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/ioicons@4.5.10-0/dist/css/ioicons.mis.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>AppShell</title>
+
+
+</head>
+
+<body>
+    <header id="header">
+        <h1>Photo AppShell</h1>
+    </header>
+
+    <script scr="main.js"></script>
+
+    <main>
+        Content goes here.
+
+    </main>
+
+    <nav>
+        <div id="tabs">
+            <a href="" class="tab">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="share-alt"
+                    class="svg-inline--fa fa-share-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512" id="shr">
+                    <path fill="white" d="M352 320c-22.608 0-43.387 7.819-59.79 20.895l-102.486-64.054a96.551 96.551 0 0 0 
+                0-41.683l102.486-64.054C308.613 184.181 329.392 192 352 192c53.019 0 96-42.981 96-96S405.019 0 352 0s-96 42.981-96 
+                96c0 7.158.79 14.13 2.276 20.841L155.79 180.895C139.387 167.819 118.608 160 96 160c-53.019 0-96 42.981-96 96s42.981 
+                96 96 96c22.608 0 43.387-7.819 59.79-20.895l102.486 64.054A96.301 96.301 0 0 0 256 416c0 53.019 42.981 96 96 96s96-42.981 
+                96-96-42.981-96-96-96z"></path>
+                </svg>
+
+                <p>Share</p>
+            </a>
+
+            <a href="../index.html" class="tab active">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+                    class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512" id="mn">
+                    <path fill="white" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0
+                 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 
+                 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 
+                 16v40c0 8.837 7.163 16 16 16z"></path>
+                </svg>
+
+                <p>Menu</p>
+            </a>
+
+
+            <a href="" class="tab">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user"
+                    class="svg-inline--fa fa-user fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512" id="prf">
+                    <path fill="white" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128
+                128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 
+                48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path>
+                </svg>
+
+                <p>Profile</p>
+            </a>
+        </div>
+    </nav>
+    <script>
+        document.querySelectorAll("#tabs .tab").forEach(tab => {
+            tab.addEventListener("click", event => {
+                event.preventDefault();
+                document
+                    .querySelector("#tabs .tab.active")
+                    .classList.remove("active");
+                event.currentTarget.classList.add("active");
+            });
+        });
+    </script>
+</body>
+
+</html>

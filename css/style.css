@@ -1,0 +1,169 @@
+:root{
+        --primary: blue;
+        --navbar-height: 60px;
+        --tabs-height: 70px;
+    }
+
+    *{
+        box-sizing: border-box;
+    }
+
+body{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #ececec;
+}
+
+#header{
+    background-color: var(--primary);
+    color: white;
+    height: var(--navbar-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#header h1{
+    margin: 0;
+}
+
+#tabs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: blue;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: var(--tabs-height);
+}
+
+#tabs a{
+    text-decoration: none;
+    color: initial;
+    opacity: 0.6;
+    transition: opacity 120ms ease-out;
+}
+
+#tabs a.active{
+    opacity: 1;
+}
+
+#tabs p{
+    margin-top: 0;
+    color: white;
+}
+
+#screens{
+    height: calc(100vh - var(--navbar-height) - var(--tabs-height));
+    display: grid;
+    grid-template-rows: repeat(4, 100vw);
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+ 
+}
+
+#screens .screen{
+    height: 100%;
+    scroll-snap-align: center;
+}
+
+#a2hs {
+    position: absolute;
+    right: 15px;
+    display: none;
+  }
+
+#a2hs.show {
+    display: block;
+  }
+
+div.example {
+    background-color: aqua;
+    padding: 20px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    div.example {
+      display: none;
+    }
+    .grid-container {
+        display: block;
+    }
+  }
+
+.item1 { grid-area: header; }
+.item2 { grid-area: manu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: rechts; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'manu main main main rechts rechts'
+    'manu footer footer footer footer footer';
+  grid-gap: 20px;
+  padding: 10px;
+  position: initial;
+  margin: 10px 10px 10px 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 50px 10px;
+  font-size: 30px;
+}
+
+.item1 , .item5{
+    background-color: gray;
+}
+
+.item2 , .item4{
+    background-color: lightgray;
+}
+
+.item3{
+    background-color: darkgrey;
+}
+
+
+/* #shr{
+    position: absolute;
+    right: 15px;
+    display: none;
+
+}
+
+#shr.show{
+     display: block;
+    
+} */
+
+
+/* nav{
+    background-color: blue;
+    height: 20vh;
+} */
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {...} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */
+
